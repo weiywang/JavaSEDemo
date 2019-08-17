@@ -48,4 +48,12 @@ public class S06_QuickSort {
         array[i] = array[j];
         array[j] = temp;
     }
+
+    public static void main(String[] Args){
+        int[] array = {1,3,2,5,8,4,6};
+        int[] res = QuickSort(array, 0, 6);
+        for(int i = 0; i < res.length; i++){
+            System.out.println(res[i]);
+        }
+    }
 }
