@@ -3,7 +3,7 @@ package PrepareForPuFa;
 public class BubbleSort {
     public static int[] bubbleSort(int[] array){
         if(array.length == 0){
-            return null;
+            return array;
         }
 
         for(int i = 0; i < array.length; i++){
