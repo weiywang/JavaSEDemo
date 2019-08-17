@@ -1,6 +1,6 @@
 package PrepareForPuFa;
 
-public class InsertsionSort {
+public class S03_InsertsionSort {
     /**
      * 插入排序
      * @param array

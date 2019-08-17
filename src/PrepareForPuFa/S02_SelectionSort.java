@@ -1,6 +1,6 @@
 package PrepareForPuFa;
 
-public class SelectionSort {
+public class S02_SelectionSort {
     /**
      * 选择排序
      * @param array

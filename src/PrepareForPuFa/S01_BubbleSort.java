@@ -1,6 +1,6 @@
 package PrepareForPuFa;
 
-public class BubbleSort {
+public class S01_BubbleSort {
     public static int[] bubbleSort(int[] array){
         if(array.length == 0){
             return array;
