@@ -7,15 +7,16 @@ public class RegexMatch {
 
         boolean[][] dp = new boolean[slen+1][plen+1];//注意要是slen+1，要多加1
 
-        dp[0][0] = false;
+        dp[0][0] = true;//初始值应设为true
 
-        for(int i = 0; i < slen; i++){
-            for(int j = 1; j < plen; j++){
-                if(p.charAt(j-1) != '*'){
-                    dp[i][j] = dp[i-1][j-1] && (s.charAt(i-1) == p.charAt(j-1) || p.charAt(j-1) == '.');
-                }else{
+        for(int i = 0; i <= slen; i++){
+            for(int j = 1; j <= plen; j++){
+                if(p.charAt(j-1) == '*'){
                     //dp[i-1][j]? s.charAt(i-1) == p.charAt(j-2)?
+                    //在本轮计算中，考察的是j-1，因此如果*什么也没代替，就自然考虑j-2
                     dp[i][j] = dp[i][j-2] || (i>0 && dp[i-1][j] && (s.charAt(i-1) == p.charAt(j-2) || p.charAt(j-2) == '.'));
+                }else{
+                    dp[i][j] = i > 0 && dp[i-1][j-1] && (s.charAt(i-1) == p.charAt(j-1) || p.charAt(j-1) == '.');
                 }
             }
         }
