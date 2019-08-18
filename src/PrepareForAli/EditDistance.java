@@ -10,21 +10,21 @@ public class EditDistance {
 
         int[][] dp = new int[m+1][n+1];
 
-        for(int i = 0; i <= m; i++){//边界条件是i<=m
+        for(int i = 0; i <= m; i++){//边界条件是i<=m? 需要到m，dp[m][0],表示长为m的word1变成word2的代价
             dp[i][0] = i;
         }
 
-        for(int i = 0; i <= n; i++){//边界条件是i<=n
+        for(int i = 0; i <= n; i++){//边界条件是i<=n?
             dp[0][i] = i;
         }
 
-        for(int i = 1; i <= m; i++){//起始为1
+        for(int i = 1; i <= m; i++){//起始为1? 底下有i-1的操作
             for(int j = 1; j <= n; j++){
                 int left = dp[i-1][j] + 1;
                 int down = dp[i][j-1] + 1;
                 int leftdown = dp[i-1][j-1];
 
-                if(word1.charAt(i-1) != word2.charAt(j-1)){//是i-1,j-1,
+                if(word1.charAt(i-1) != word2.charAt(j-1)){//是i-1,j-1,? 第i个字符的Index是i-1
                     leftdown = leftdown + 1;
                 }
 
