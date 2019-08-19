@@ -1,4 +1,4 @@
-package PrepareForAli;
+package PrepareForAli.DynamicProgramming;
 
 public class RegexMatch {
     public boolean isMatch(String s, String p) {

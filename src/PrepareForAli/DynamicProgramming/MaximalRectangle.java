@@ -1,4 +1,4 @@
-package PrepareForAli;
+package PrepareForAli.DynamicProgramming;
 
 import java.util.Arrays;
 

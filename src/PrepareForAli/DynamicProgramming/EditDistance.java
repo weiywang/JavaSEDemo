@@ -1,4 +1,4 @@
-package PrepareForAli;
+package PrepareForAli.DynamicProgramming;
 
 public class EditDistance {
     public int minDistance(String word1, String word2) {
