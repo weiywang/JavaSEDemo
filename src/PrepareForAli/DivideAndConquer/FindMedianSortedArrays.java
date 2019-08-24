@@ -1,4 +1,4 @@
-package PrepareForAli.BackTrack;
+package PrepareForAli.DivideAndConquer;
 
 public class FindMedianSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
