@@ -4,7 +4,7 @@ package PrepareForPuFa;
 public class S11_AnotherQuickSort {
     public static int[] quickSort(int[] a,int first,int last){
         if(first<last){                //至少两个位置
-            int pivotIndex=partition(a,first,last);  //定义pivotIndex中间位置。partition是检索这个方法
+            int pivotIndex = partition(a,first,last);  //定义pivotIndex中间位置。partition是检索这个方法
             quickSort(a,first,pivotIndex-1);              //排序左半边
             quickSort(a,pivotIndex+1,last);               //排序右半边
         }
