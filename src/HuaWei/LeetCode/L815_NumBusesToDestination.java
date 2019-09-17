@@ -25,6 +25,7 @@ public class L815_NumBusesToDestination {
                 for (int bus: buses) {
                     if (visited.contains(bus)) continue;
                     visited.add(bus);
+                    //为何要把所有可能公交路线上的点都入栈？因为对于cur点来说，这些点都是可达的
                     for (int j = 0; j < routes[bus].length; j++) {
                         if (routes[bus][j] == T) return res;
                         q.offer(routes[bus][j]);
