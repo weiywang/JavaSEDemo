@@ -24,22 +24,14 @@ public class Answer1 {
         int r = Integer.parseInt(s3.trim());
         String s = "";
         for(int i = 0; i < a.length; i++){
-            int x = 0;
             for(int j = 0; j < b.length;j++){
-                if(b[j]-a[i]>=0 && b[j] - a[i] <= r){
-                    x++;
-                    s += "(" +a[i]+","+b[j]+"),";
-                }else{
-                    if(x == 0 && b[j] - a[i] >=0){
-                        s += "(" +a[i]+","+b[j]+"),";
-                    }
-                }
+                if(b[j]-a[i]>=0){
+                    s += "(" +a[i]+","+b[j]+")";
+                    break;
+                }else continue;
             }
         }
-        if(s.endsWith(",")){
-            s = s.substring(0,s.length()-1);
-        }
-        System.out.println(s);
+        System.out.print(s);
     }
 
 }

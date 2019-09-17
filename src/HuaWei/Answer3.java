@@ -3,10 +3,12 @@ package HuaWei;
 import java.util.*;
 public class Answer3 {
     public static void main(String[] args) {
+        HashMap<String, String> mapA = new HashMap<>();
+        HashMap<String, String> mapB = new HashMap<>();
         StringBuilder res = new StringBuilder();
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt();
-        HashMap<String, String> mapA = new HashMap<>();
+        sc.nextLine();
         for(int i = 0; i < m; i++){
             String temp = sc.nextLine();
             String left = temp.substring(0, 9);
@@ -15,8 +17,8 @@ public class Answer3 {
         }
 
         int n = sc.nextInt();
-        HashMap<String, String> mapB = new HashMap<>();
-        for(int i = 0; i < n; i++){
+        sc.nextLine();
+        for(int j = 0; j < n; j++){
             String temp = sc.nextLine();
             String left = temp.substring(0, 9);
             String right = temp.substring(10, temp.length());
@@ -26,13 +28,13 @@ public class Answer3 {
         Set<String> setA = mapA.keySet();
         for(String str : setA){
             if(mapB.containsKey(str)){
-                res.append(mapB.get(str)+mapA.get(str)+"\n");
+                res.append(mapB.get(str)+","+mapA.get(str)+"\n");
             }else{
-                res.append(str+mapA.get(str)+"\n");
+                res.append(str+","+mapA.get(str)+"\n");
             }
         }
 
-        System.out.println(res);
+        System.out.print(res);
 
 
     }

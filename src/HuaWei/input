@@ -1,0 +1,11 @@
+A={1,3,5},B={2,4,6},R=1
+
+I am an 20-years out--standing @ * -stu- dent
+
+3
+CZ7132,A1,ZHANGSAN
+CZ7132,A2,ZHAOSI
+CZ7156,A2,WANGWU
+2
+CZ7132,A1,CZ7156,A2
+CZ7156,A2,CZ7156,A3
