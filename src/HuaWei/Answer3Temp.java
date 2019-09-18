@@ -1,7 +1,7 @@
 package HuaWei;
 
 import java.util.*;
-public class Answer3 {
+public class Answer3Temp {
     public static void main(String[] args) {
         HashMap<String, String> mapA = new HashMap<>();
         HashMap<String, String> mapB = new HashMap<>();
